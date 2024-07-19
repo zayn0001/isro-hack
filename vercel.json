@@ -6,7 +6,7 @@
           },
           {
             "use": "@vercel/python",
-            "src": "backend/index.py"
+            "src": "api/index.py"
           }
     ]
 

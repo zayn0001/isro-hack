@@ -38,7 +38,7 @@ def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(securit
     except Exception as e:
         raise HTTPException(status_code=401, detail="Invalid token")
 
-@app.get("/backend/python")
+@app.get("/api/python")
 def hello_world(request: Request, current_user: dict = Depends(get_current_user)):
     mystr = f"Hello, {current_user['name']}. This is a random sentence"
     return {"message":mystr}

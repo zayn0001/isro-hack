@@ -19,9 +19,9 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
 
 
-  const fetchBackendData = async (accessToken) => {
+  const fetchapiData = async (accessToken) => {
     try {
-      const response = await fetch("/backend/python", {
+      const response = await fetch("/api/python", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -49,7 +49,7 @@ export default function Dashboard() {
       if (currentUser) {
         console.log(currentUser)
         setUser(currentUser);
-        fetchBackendData(currentUser.accessToken);
+        fetchapiData(currentUser.accessToken);
       } else {
         router.push('/signin'); 
       }
