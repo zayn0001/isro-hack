@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 app_base = path.dirname(__file__)
 app_root = path.join(app_base, '../')
 
-load_dotenv(dotenv_path=path.join(app_root, '.env.local'))
+load_dotenv(dotenv_path=path.join(app_root, '.env'))
 
 cred = credentials.Certificate(json.loads(getenv("SERVICE_ACCOUNT_KEY")))
 firebase_admin.initialize_app(cred)

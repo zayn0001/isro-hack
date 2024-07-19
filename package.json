@@ -11,7 +11,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.30.0",
     "@eartho/one-client-react": "^2.0.9",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
